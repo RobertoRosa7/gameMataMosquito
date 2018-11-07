@@ -31,7 +31,7 @@ var cronometro = setInterval(function(){
 		//clearInterval para limpar a execução do cronometro da memória
 		clearInterval(cronometro);
 		clearInterval(criaMosquito);
-		alert('Você ganho');
+		window.location.href = 'vitoria.html';
 	}else{
 	// innerHTML - escrever valor entre as tag HTML
 	document.getElementById('cronometro').innerHTML = tempo;
