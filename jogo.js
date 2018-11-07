@@ -4,6 +4,7 @@
 
 var altura = 0;
 var largura = 0;
+var vidas = 1;
 /*
 * Função para encapuslar os valores das dimensões da página de forma dinâmica
 * Necessário o atributo onresize na tag body
@@ -26,6 +27,15 @@ function posicaoRandomica(){
 	// Remover o mosquito - caso já exista
 	if(document.getElementById('mosquito')){
 		document.getElementById('mosquito').remove();
+
+		// substituindo a imagem do coração e verificando o Game Over
+		if(vidas > 3){
+			alert('Game Over')
+		}else{
+			document.getElementById('v' + vidas).src="imagens/mata-mosquito-coracao_vazio.png";
+			vidas++;
+
+		}
 	}
 
 	// Criando posições randômicas para a imagem mosquito
@@ -58,6 +68,12 @@ function posicaoRandomica(){
 
 	// Criação de um Id para o elemento, assim podemos remover se já existe o mesmo elemento
 	mosquito.id = 'mosquito';
+
+	// Criação do clique no elemento e removê-lo
+	mosquito.onclick = function(){
+		//this - faz referência ao próprio elemento HTML que está na função, isto é, posicaoRandomica()
+		this.remove();
+	}
 
 	// Criando elemento filho do body
 	document.body.appendChild(mosquito);
