@@ -6,7 +6,7 @@ var altura = 0;
 var largura = 0;
 var vidas = 1;
 var tempo = 20;
-var criaMosquitoTempo = 1500
+var criaMosquitoTempo = 2500
 // obtendo o endereço da url com parâmetro selecionado dos níveis
 var nivel = window.location.search;
 
@@ -16,15 +16,15 @@ nivel = nivel.replace('?', '');
 // verificando e aplicando os níveis
 if(nivel === 'normal'){
 	//1500
-	var criaMosquitoTempo = 1500
+	var criaMosquitoTempo = 2500
 
 }else if(nivel === 'dificil'){
 	//1000
-	var criaMosquitoTempo = 1000
+	var criaMosquitoTempo = 2000
 
 }else if(nivel == 'chuck-norris'){
 	//750
-	var criaMosquitoTempo = 750
+	var criaMosquitoTempo = 1000
 
 }
 /*
