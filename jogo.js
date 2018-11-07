@@ -24,8 +24,14 @@ ajustaTamanhoJogo();
 function posicaoRondomica(){
 
 	// Criando posições randômicas para a imagem mosquito
-	var posicaoX = Math.floor(Math.random() * largura);
-	var posicaoY = Math.floor(Math.random() * altura);
+	var posicaoX = Math.floor(Math.random() * largura) - 90; // -90 para a imagem não sair da dimensão da página
+	var posicaoY = Math.floor(Math.random() * altura) - 90;
+
+	// verificação para a imagem não sair da tela se a posição for menor que zero
+	posicaoX = posicaoX < 0 ? 0 : posicaoX;
+	posicaoY = posicaoY < 0 ? 0 : posicaoY;
+
+	// debug
 	console.log(posicaoX, posicaoY);
 
 	// Criando o elemento HTML de imagem
@@ -36,6 +42,11 @@ function posicaoRondomica(){
 
 	// Adicionando Classe ao elemento
 	mosquito.className = 'mosquito1';
+
+	// Modificando a posição da imagem randômicamente
+	mosquito.style.left = posicaoX + 'px';
+	mosquito.style.top = posicaoY + 'px';
+	mosquito.style.position = 'absolute';
 
 	// Criando elemento filho do body
 	document.body.appendChild(mosquito);
