@@ -24,29 +24,14 @@
     </style>
 
   </head>
-  <body onresize="ajustaTamanhoJogo()">
-
-    <div class="painel">
-      <div class="vidas">
-        <img id="v1" src="imagens/mata-mosquito-coracao_cheio.png" alt="">
-        <img id="v2" src="imagens/mata-mosquito-coracao_cheio.png" alt="">
-        <img id="v3" src="imagens/mata-mosquito-coracao_cheio.png" alt="">
-
-      </div>
-      <div class="cronometro">
-        Tempo restante
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <img src="imagens/mata-mosquito-game_over.png" alt="">
+        </div>
       </div>
     </div>
 
-    <script>
-      // Função responsável pela chamada da posição randômica, com intervalos
-      setInterval(function(){
-        
-        posicaoRandomica();
-
-      }, 3000);
-
-      // Antes de criar um elemento remover o anterior
-    </script>
   </body>
 </html>
