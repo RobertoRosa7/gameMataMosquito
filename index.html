@@ -27,8 +27,14 @@
   <body onresize="ajustaTamanhoJogo()">
 
     <script>
-      posicaoRandomica();
       // Função responsável pela chamada da posição randômica, com intervalos
+      setInterval(function(){
+        
+        posicaoRandomica();
+
+      }, 2000);
+
+      // Antes de criar um elemento remover o anterior
     </script>
   </body>
 </html>

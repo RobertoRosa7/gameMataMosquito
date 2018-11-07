@@ -23,6 +23,11 @@ ajustaTamanhoJogo();
 // Função para encapsular os elementos de criação da página de forma programática
 function posicaoRandomica(){
 
+	// Remover o mosquito - caso já exista
+	if(document.getElementById('mosquito')){
+		document.getElementById('mosquito').remove();
+	}
+
 	// Criando posições randômicas para a imagem mosquito
 	var posicaoX = Math.floor(Math.random() * largura) - 90; // -90 para a imagem não sair da dimensão da página
 	var posicaoY = Math.floor(Math.random() * altura) - 90;
@@ -50,6 +55,9 @@ function posicaoRandomica(){
 	mosquito.style.left = posicaoX + 'px';
 	mosquito.style.top = posicaoY + 'px';
 	mosquito.style.position = 'absolute';
+
+	// Criação de um Id para o elemento, assim podemos remover se já existe o mesmo elemento
+	mosquito.id = 'mosquito';
 
 	// Criando elemento filho do body
 	document.body.appendChild(mosquito);
