@@ -30,7 +30,9 @@ function posicaoRandomica(){
 
 		// substituindo a imagem do coração e verificando o Game Over
 		if(vidas > 3){
-			alert('Game Over')
+
+			// Redirecionamento para página Game Over
+			window.location.href = 'game-over.html';
 		}else{
 			document.getElementById('v' + vidas).src="imagens/mata-mosquito-coracao_vazio.png";
 			vidas++;
