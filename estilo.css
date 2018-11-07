@@ -5,9 +5,17 @@ html{
 	cursor:url(imagens/mata-mosquito-mata_mosca.png)30 30, auto;
 }
 body{
-	background:url(imagens/mata-mosquito-bg.jpg)no-repeat;
+	background-image:url(imagens/mata-mosquito-bg.jpg);
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center center;
+	background-attachment:fixed;
 }
-
+.game-over img, .vitoria img{
+	background-size: cover;
+	background-position: center center;
+	background-attachment:fixed;
+}
 .mosquito1{
 	width:45px;
 	height:45px;
