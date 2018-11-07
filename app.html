@@ -24,23 +24,31 @@
     </style>
 
   </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="d-flex justify-content-center">
-            <img src="imagens/mata-mosquito-game.png" alt="">            
-          </div>
-        </div>
-      </div>
+  <body onresize="ajustaTamanhoJogo()">
 
-       <div class="row">
-        <div class="col">
-          <div class="d-flex justify-content-center">
-            <button class="btn btn-light btn-lg" type="button">Iniciar Jogo</button>
-          </div>
-        </div>
+    <div class="painel">
+      <div class="vidas">
+        <img id="v1" src="imagens/mata-mosquito-coracao_cheio.png" alt="">
+        <img id="v2" src="imagens/mata-mosquito-coracao_cheio.png" alt="">
+        <img id="v3" src="imagens/mata-mosquito-coracao_cheio.png" alt="">
+
+      </div>
+      <div class="cronometro">Tempo restante: <span id="cronometro"></span>
       </div>
     </div>
+
+    <script>
+      
+      document.getElementById('cronometro').innerHTML = tempo;
+
+      // Função responsável pela chamada da posição randômica, com intervalos, de criar mosquitos aleatórios
+      var criaMosquito = setInterval(function(){
+        
+        posicaoRandomica();
+
+      }, 2000);
+
+      // Antes de criar um elemento remover o anterior
+    </script>
   </body>
 </html>
