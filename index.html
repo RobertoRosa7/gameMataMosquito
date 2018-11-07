@@ -33,18 +33,20 @@
         <img id="v3" src="imagens/mata-mosquito-coracao_cheio.png" alt="">
 
       </div>
-      <div class="cronometro">
-        Tempo restante
+      <div class="cronometro">Tempo restante: <span id="cronometro"></span>
       </div>
     </div>
 
     <script>
-      // Função responsável pela chamada da posição randômica, com intervalos
-      setInterval(function(){
+      
+      document.getElementById('cronometro').innerHTML = tempo;
+
+      // Função responsável pela chamada da posição randômica, com intervalos, de criar mosquitos aleatórios
+      var criaMosquito = setInterval(function(){
         
         posicaoRandomica();
 
-      }, 3000);
+      }, 2000);
 
       // Antes de criar um elemento remover o anterior
     </script>

@@ -5,7 +5,7 @@
 var altura = 0;
 var largura = 0;
 var vidas = 1;
-var tempo = 10;
+var tempo = 20;
 /*
 * Função para encapuslar os valores das dimensões da página de forma dinâmica
 * Necessário o atributo onresize na tag body
@@ -21,6 +21,22 @@ function ajustaTamanhoJogo(){
 }
 ajustaTamanhoJogo();
 
+// função cronometro, irá decrementar 1s da variável global tempo
+var cronometro = setInterval(function(){
+	
+	tempo -= 1;
+
+	// verificação do cronometro negativo, se o tempo acabar e ainda restar vida o usuário ganhou
+	if(tempo < 0){
+		//clearInterval para limpar a execução do cronometro da memória
+		clearInterval(cronometro);
+		clearInterval(criaMosquito);
+		alert('Você ganho');
+	}else{
+	// innerHTML - escrever valor entre as tag HTML
+	document.getElementById('cronometro').innerHTML = tempo;
+	}
+}, 1000)
 
 // Função para encapsular os elementos de criação da página de forma programática
 function posicaoRandomica(){
