@@ -1,6 +1,9 @@
 /*
 * Game Mata Mosquito
 */ 
+body{
+	background:url(imagens/mata-mosquito-bg.jpg)no-repeat;
+}
 .mosquito1{
 	width:45px;
 	height:45px;
