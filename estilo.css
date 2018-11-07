@@ -1,6 +1,9 @@
 /*
 * Game Mata Mosquito
 */ 
+html{
+	cursor:url(imagens/mata-mosquito-mata_mosca.png)30 30, auto;
+}
 body{
 	background:url(imagens/mata-mosquito-bg.jpg)no-repeat;
 }
