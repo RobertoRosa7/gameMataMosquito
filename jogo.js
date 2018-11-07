@@ -21,7 +21,7 @@ ajustaTamanhoJogo();
 
 
 // Função para encapsular os elementos de criação da página de forma programática
-function posicaoRondomica(){
+function posicaoRandomica(){
 
 	// Criando posições randômicas para a imagem mosquito
 	var posicaoX = Math.floor(Math.random() * largura) - 90; // -90 para a imagem não sair da dimensão da página
@@ -40,8 +40,11 @@ function posicaoRondomica(){
 	// Adicionando atribuo src da imagem
 	mosquito.src = 'imagens/mata-mosquito-mosca.png';
 
-	// Adicionando Classe ao elemento
-	mosquito.className = 'mosquito1';
+	// Adicionando Classe ao elemento fixo
+	//mosquito.className = 'mosquito1';
+
+	// Adicionando Class ao elemento de forma randômica
+	mosquito.className = tamanhoAleatorio();
 
 	// Modificando a posição da imagem randômicamente
 	mosquito.style.left = posicaoX + 'px';
@@ -51,4 +54,21 @@ function posicaoRondomica(){
 	// Criando elemento filho do body
 	document.body.appendChild(mosquito);
 
+}
+
+// Tamanhos aleatórios para as imagens dos mosquitos
+function tamanhoAleatorio(){
+	// gerar randomicamente números de 0 ate 2
+	var classe = Math.floor(Math.random() * 3);
+
+	// Switch ou if para as tomadas de decisões
+	switch(classe){
+		case 0:
+			// sem break porque a instrução return é a última 
+			return 'mosquito1';
+		case 1:
+			return 'mosquito2';
+		case 2:
+			return 'mosquito3';
+	}
 }
