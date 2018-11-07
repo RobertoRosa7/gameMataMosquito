@@ -5,6 +5,7 @@
 var altura = 0;
 var largura = 0;
 var vidas = 1;
+var tempo = 10;
 /*
 * Função para encapuslar os valores das dimensões da página de forma dinâmica
 * Necessário o atributo onresize na tag body
