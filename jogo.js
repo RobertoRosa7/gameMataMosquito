@@ -44,7 +44,7 @@ function posicaoRandomica(){
 	//mosquito.className = 'mosquito1';
 
 	// Adicionando Class ao elemento de forma randômica
-	mosquito.className = tamanhoAleatorio();
+	mosquito.className = tamanhoAleatorio() + ' ' + ladoAleatorio();
 
 	// Modificando a posição da imagem randômicamente
 	mosquito.style.left = posicaoX + 'px';
@@ -74,5 +74,12 @@ function tamanhoAleatorio(){
 }
 // Lados aleatórios do mosquito
 function ladoAleatorio(){
-	
+	var classe = Math.floor(Math.random() * 2);
+
+	switch(classe){
+		case 0:
+			return 'ladoA';
+		case 1:
+			return 'ladoB';
+	}
 }
