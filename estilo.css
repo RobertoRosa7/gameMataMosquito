@@ -20,5 +20,14 @@ body{
 	transform: scaleX(1);
 }
 .ladoB{
-	transform: scaleX(-1); /* altera o lado da imagem
+	transform: scaleX(-1); /* altera o lado da imagem */
+}
+.painel{
+	position:absolute;
+	width:190px;
+	padding:10px;
+	bottom:0;
+	border-top:1px solid #fff;
+	background-color:#fff;
+	opacity: 0.7;
 }
