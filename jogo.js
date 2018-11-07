@@ -72,3 +72,7 @@ function tamanhoAleatorio(){
 			return 'mosquito3';
 	}
 }
+// Lados aleatórios do mosquito
+function ladoAleatorio(){
+	
+}
