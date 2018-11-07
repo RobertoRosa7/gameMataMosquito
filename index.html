@@ -17,7 +17,19 @@
     <link rel="icon" href="imagens/mata-mosquito-mosca.png">
     
     <title>Game Mata Mosquito</title>
-    <script src="jogo.js"></script>
+    <script>
+      function iniciarJogo(){
+        // encapsulando o valor escolhido em select para a variável nivel
+        var nivel = document.getElementById('nivel').value;
+
+        // verificando se o valor selecionado é vazio
+        if(nivel == ''){
+          alert('Selecione um nível para iniciar o jogo');
+          // para finalizar a intrução como false porque só deve inicializar o jogo se haver uma opção selecionada
+          return false;
+        }
+      }
+    </script>
 
     <style>
 
@@ -38,7 +50,7 @@
         <div class="col">
           <div class="d-flex justify-content-center">
             <div class="mb-2">
-              <select name="" id="" class="form-control">
+              <select name="" id="nivel" class="form-control">
                 <option value="">--Selecione o nível--</option>
                 <option value="normal">Normal</option>
                 <option value="dificil">Difícil</option>
@@ -52,7 +64,7 @@
        <div class="row">
         <div class="col">
           <div class="d-flex justify-content-center">
-            <button class="btn btn-light btn-lg" type="button">Iniciar Jogo</button>
+            <button onclick="iniciarJogo()"class="btn btn-light btn-lg" type="button">Iniciar Jogo</button>
           </div>
         </div>
       </div>
