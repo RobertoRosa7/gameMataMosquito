@@ -6,6 +6,27 @@ var altura = 0;
 var largura = 0;
 var vidas = 1;
 var tempo = 20;
+var criaMosquitoTempo = 1500
+// obtendo o endereço da url com parâmetro selecionado dos níveis
+var nivel = window.location.search;
+
+// removendo o caractere de interrogação (?) dos parâmetros
+nivel = nivel.replace('?', '');
+
+// verificando e aplicando os níveis
+if(nivel === 'normal'){
+	//1500
+	var criaMosquitoTempo = 1500
+
+}else if(nivel === 'dificil'){
+	//1000
+	var criaMosquitoTempo = 1000
+
+}else if(nivel == 'chuck-norris'){
+	//750
+	var criaMosquitoTempo = 750
+
+}
 /*
 * Função para encapuslar os valores das dimensões da página de forma dinâmica
 * Necessário o atributo onresize na tag body
